@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>commstemplatesvc-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>CTP : CommsTemplateSvc-Api</name>
+    <description>CTP : CommsTemplateSvc-Api</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- Inherit parent BOM to control versions of dependencies and plugin version & config -->
+    <parent>
+        <groupId>uk.gov.ons.ctp.product</groupId>
+        <artifactId>rm-common-config</artifactId>
+        <version>10.49.6</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.gov.ons.ctp.common</groupId>
+            <artifactId>framework</artifactId>
+        </dependency>
+    </dependencies>
+
+    <scm>
+        <url>https://github.com/ONSdigital/rm-commstemplatesvc-api</url>
+        <connection>scm:git:https://github.com/ONSdigital/rm-commstemplatesvc-api</connection>
+        <developerConnection>scm:git:https://github.com/ONSdigital/rm-commstemplatesvc-api</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
